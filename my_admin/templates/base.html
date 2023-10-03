@@ -1,0 +1,97 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>{% block title %}Hayot guzal{% endblock %}</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/headers/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/header.css' %}" rel="stylesheet">
+    <link href="{% static 'css/checkout.css' %}" rel="stylesheet">
+
+  </head>
+  <body>
+    
+
+
+    <main>
+      <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <img src="{% static 'image/hospital-svgrepo-com.svg' %}" alt="Logo" width="30" height="30" style="margin-right: 10px ;" class="d-inline-block align-top" />
+            <h2>Hayot guzal</h2>
+          </a>
+    
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Boshi</a></li>
+            <li class="nav-item"><a href="{% url 'kasalik' %}" class="nav-link">Kasaliklar</a></li>
+            <li class="nav-item"><a href="{% url 'jadval' %}" class="nav-link">Table</a></li>
+            <li class="nav-item"><a href="{% url 'form' %}" class="nav-link">Predict</a></li>
+            {% if user.is_authenticated %}
+                <!-- Foydalanuvchi tizimga kirgan bo'lsa -->
+            <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link active" aria-current="page">Chiqish</a></li>
+            {% else %}
+                <!-- Foydalanuvchi tizimga kiragan emas bo'lsa -->
+            <li class="nav-item"><a href="{% url 'signup' %}" class="nav-link active" aria-current="page">Kirish</a></li>
+
+            {% endif %}
+          </ul>
+          
+          <!-- <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-primary me-2">Login</button>
+            <button type="button" class="btn btn-primary">Sign-up</button>
+          </div> -->
+        </header>
+      </div>
+    </main>
+    
+<main>
+    {% block content %}{% endblock %}
+    <br><br>
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="{%url 'home' %}">Back to top</a></p>
+    <p>&copy; 2023 IT System &middot; <a href="#">Bog'lanish</a> &middot; <a href="{%url 'home' %}">murojat</a></p>
+  </footer>
+</main>
+    <script>
+  // Forma tozalash funktsiyasi
+  function resetForm() {
+    document.getElementById("myForm").reset(); // "myForm" ni o'zgartiring to'g'ri form nomi bilan
+  }
+</script>
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/checkout.js' %}"></script>
+
+      
+  </body>
+</html>
