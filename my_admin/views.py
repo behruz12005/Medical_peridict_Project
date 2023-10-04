@@ -58,7 +58,7 @@ def FormPage(request):
             # return redirect('form')  # Muvaffaqiyatli yuborildi
             risk = calculate_cardiovascular_risk(int(age), int(systolic_blood_pressure), int(total_cholesterol), int(hdl_cholesterol), int(on_blood_pressure_medication), int(cigarette_smoker), int(diabetes_present))
             risk = f"{risk:.2f}"
-            text = f"10-year cardiovascular risk: {risk}"
+            text = f"{risk}%"
             AnalyzResult.objects.create(
                 first_name=first_name,
                 last_name=last_name,
