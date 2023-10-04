@@ -72,7 +72,7 @@ def FormPage(request):
                 diabetes_present=diabetes_present,
                 predict = risk
             )
-            return render(request, 'form.html', {'text':text})
+            return render(request, 'form.html', {'form': form,'text':text})
     else:
         form = AnalyzForm()
     return render(request, 'form.html', {'form': form})

@@ -1,155 +1,211 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-
-
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="container">
-      <div class="carousel-item active">
-        <img src="https://previews.123rf.com/images/leventegyori/leventegyori1506/leventegyori150600296/41666563-doctor-with-medical-background.jpg" alt="">
-
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p> Bizning Pridect saytimizda bemorlar uchun eng yaxshi xizmatlar!.</p>
-            <p><a class="btn btn-lg btn-primary" href="{% url 'form' %}">Sign up today</a></p>
+<!-- Hero Start -->
+    <div class="container-fluid btn-light py-5 mb-5 hero-header">
+      <div class="container py-5">
+          <div class="row justify-content-start">
+              <div class="col-lg-8 text-center text-lg-start">
+                  <h5 class="d-inline-block text-uppercase text-uppercase border-bottom border-5" style="border-color: rgba(0, 0, 0, 0.97) !important;">Xush Kelibsiz Cushingga</h5>
+                  <h1 class="display-1 text-decoration-none mb-md-4" >To'siqlarni sindirib, sog’lom hayot uchun birga kurashamiz!</h1>
+                  <div class="pt-2">
+                      <a href="" class="btn btn-primary rounded-pill py-md-3 px-md-5 mx-2">Natijani sinash</a>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                  <!-- Rasmni quyish uchun rasmingizning manzili va hajmi kerak -->
+                  <br>
+                  <img src="{% static 'image/image 1.jpg' %}" alt="rasm" class="img-fluid" style="height: 60vh; width: 100%;">
+              </div>
           </div>
-        </div>
       </div>
-      <div class="carousel-item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpv8dxW8BoXlWmGIcrGJjDb-5-uc7A4zwQmhkkAGVdTVvFudC5RIhNYKXvNVglkVy_fOs&usqp=CAU" alt="">
-
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://media.istockphoto.com/id/1314913951/photo/phonendoscope-on-a-blue-background-medical-background.jpg?s=612x612&w=0&k=20&c=weuGAo6-LIolarhvVNDnv3QK63B3K-S2n1uEuMJgLRU=" alt="">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
-  </div>
+  
+    <!-- Hero End -->
 
 
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-  <hr class="featurette-divider">
-  <div class="container marketing">
 
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr8EToJmRGsqYkuTeGuGDIRzZlrYQIPbVxJP-J-0ZlHJgRyYPnd_nA3O2obVcXT67ub_k&usqp=CAU" alt="">
+    
 
-        <h2>Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcQNCFfrvUFROce3OekUVG0xEPNFmFfH9tQWJ_Qp_CmgqM5yhXReIuSwAMP44Segzz3ww&usqp=CAU" alt="">
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h1 class="display-6">Bizing Xizmatlar</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <img src="{% static 'image/Frame (1).svg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Dori-darmonlar</h4>
+                        <p class="m-0">Dori-darmonlaringizni aniq bilishingiz, sizga qanday yordam berishini aniq bilish</p>
 
-        <h2>Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHFxlGuoZ7TH5OO0gVQsNQh0iB2VNTA3Kzl6oYu9aUHR1lu9qLQYDT5QmqdOJ9X8o8be0&usqp=CAU" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <img src="{% static 'image/Frame (2).svg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Konsultatsiya</h4>
+                        <p class="m-0">Ishonchli shifokorlarimiz bilan bepul maslahatlashing va eng yaxshi tavsiyalarni oling</p>
 
-        <h2>Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-    <br>
-    <div class="row">
-      <div class="col-lg-4">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHFxlGuoZ7TH5OO0gVQsNQh0iB2VNTA3Kzl6oYu9aUHR1lu9qLQYDT5QmqdOJ9X8o8be0&usqp=CAU" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <img src="{% static 'image/Frame (3).svg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Tafsilotlarlar</h4>
+                        <p class="m-0">Ishonchli shifokorlarimiz bilan bepul maslahatlashing va eng yaxshi tavsiyalarni oling</p>
 
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <img src="{% static 'image/Frame (4).svg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Tibbiy yordam</h4>
+                        <p class="m-0">Siz o'zingiz yoki farzandlaringiz va yaqinlaringiz uchun 24/7  yordam olishingiz mumkin</p>
 
-        <h2>Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr8EToJmRGsqYkuTeGuGDIRzZlrYQIPbVxJP-J-0ZlHJgRyYPnd_nA3O2obVcXT67ub_k&usqp=CAU" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <img src="{% static 'image/Frame (5).svg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Kuzatuv </h4>
+                        <p class="m-0">Tibbiy maʼlumotlarni kuzatib borish va doimiy tahlil nazorati, kuzatuvidan foydalaning</p>
 
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <img src="{% static 'image/Frame.svg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Shifokorni qidirish</h4>
+                        <p class="m-0">Yaxshi mutaxassis, umumiy va ishonchli shifokoringizni tanlash</p>
 
-        <h2>Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr8EToJmRGsqYkuTeGuGDIRzZlrYQIPbVxJP-J-0ZlHJgRyYPnd_nA3O2obVcXT67ub_k&usqp=CAU" alt="">
-
-
-        <h2>Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-      </div>
-      <div class="col-md-5">
-        <img src="https://previews.123rf.com/images/kurhan/kurhan1302/kurhan130200013/17658021-family-doctor-woman-and-a-group-of-happy-people.jpg" width="100%"  alt="">
-
-      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Services End -->
 
-    <hr class="featurette-divider">
 
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img src="https://img.freepik.com/premium-photo/hospital-profession-people-medicine-concept-group-happy-doctors-hospital_380164-96293.jpg" alt="">
+    <!-- Appointment Start -->
+    <div class="container-fluid bg-primary my-5 py-5">
+        <div class="container py-5">
+            <div class="text-white text-center mx-auto mb-5" style="max-width: 500px;">
+                <h1 class="display-6">Kushing sindromining sabablari</h1>
+            </div>
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="{% static 'image/image 2.jpg' %}" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Kushing haqida</h5>
+                        <h1 class="display-4 text-white">Kushing sindromi: alomatlari, sabablari, davolash usullari</h1>
+                    </div>
+                    <p class="text-white">(Itsenko – Kushing sindromi, giperkortitsizm) – buyrak usti bezi gormonlarini (kortizol, kortikosteron) organizmga uzoq muddat surunkali taʼsiri. 
 
-      </div>
+                        Cushing kasalligi - bu Kushing sindromining keng tarqalgan sababi bo'lib, u gipofizning ortiqcha ACTH ni chiqarib tashlagach, qo'shimcha kortizolni keltirib chiqaradi. Bu gipofiz shishi yoki boshqa o'sish natijasida yuzaga kelishi mumkin.</p>
+
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Appointment End -->
 
 
-    <hr class="featurette-divider">
+    <!-- Pricing Plan Start -->
+    <div class="container-fluid py-5 ">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h1 class="display-6">Endokrinologiya yangiliklari</h1>
+                <p>Endokrinologiya yangiliklaridan bohabar bo'ling, o'zingiz va yaqin kishilaringiz sog'lom hayotini birga kuzating.</p>
+            </div>
+            <div class="owl-carousel price-carousel position-relative" style="padding: 0 45px 45px 45px;">
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="{% static 'image/price-2.jpg' %}" alt="">
+                    </div>
+                    <div class="text-center py-5">
+                        <h4 class="mb-3">Faster ways to reach your customers and their needs.</h4>
+                        <p class="m-0">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital divide.</p>
 
-    <!-- /END THE FEATURETTES -->
+                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Batafsil</a>
+                    </div>
+                </div>
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="{% static 'image/price-2.jpg' %}" alt="">
+                    </div>
+                    <div class="text-center py-5">
+                        <h4 class="mb-3">Faster ways to reach your customers and their needs.</h4>
+                        <p class="m-0">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital divide.</p>
 
-  </div><!-- /.container -->
+                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Batafsil</a>
+                    </div>
+                </div>
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="{% static 'image/price-2.jpg' %}" alt="">
+                    </div>
+                    <div class="text-center py-5">
+                        <h4 class="mb-3">Faster ways to reach your customers and their needs.</h4>
+                        <p class="m-0">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital divide.</p>
+
+                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Batafsil</a>
+                    </div>
+                </div>
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="{% static 'image/price-2.jpg' %}" alt="">
+                    </div>
+                    <div class="text-center py-5">
+                        <h4 class="mb-3">Faster ways to reach your customers and their needs.</h4>
+                        <p class="m-0">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital divide.</p>
+
+                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Batafsil</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Plan End -->
 
 
+    
+
+
+    <!-- Search Start -->
+    <div class="container-fluid bg-primary my-5 py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Murojat</h5>
+                <h4 class="mb-6 text-white text-center">Agar sizga Endokrinologiya bo'yicha yoki kushing sindromi kasalligi bo'yicha ma'lumot kerak bo'lsa, telefon raqamingizni qoldiring!</h4>
+            </div>
+            <div class="mx-auto" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+                    <input type="text" class="form-control border-primary w-50" placeholder="Telfon nomer">
+                    <button class="btn btn-dark border-0 w-25">junatish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    
 {% endblock %}

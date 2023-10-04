@@ -5,94 +5,99 @@
 <div class="container">
   <main>
     <div class="py-5 text-center">
-        <img src="{% static 'image/hospital-svgrepo-com.svg' %}" alt="Logo" width="30" height="30" style="margin-right: 10px ;" class="d-inline-block align-top" />
-    
-      <h2>Boshorat Plus</h2>
+      <h2>Predict Form</h2>
       <p class="lead">Sog'ligingizni saqlang va yaxshi yaxshi xizmat oling: Bizning Pridect saytimizda bemorlar uchun eng yaxshi xizmatlar!</p>
     </div>
 
     <div class="row g-5">
       
-      <div class="col-md-7 col-lg-8">
-        {% if text %}
-        <h1 style="text-align: center;">{{text}}</h1>
-        {% else %}
-        <h4 class="mb-3">Kerakli malumotlar</h4>
-        {% endif %} 
-        <form class="needs-validation" novalidate method="post" action="{% url 'form' %}" >
-          {% csrf_token %}
-          <div class="row g-3">
-              <div class="col-sm-6">
-                  {{ form.first_name.label_tag }}
-                  {{ form.first_name }}
-                  {{ form.first_name.errors }}
-              </div>
-              <div class="col-sm-6">
-                  {{ form.last_name.label_tag }}
-                  {{ form.last_name }}
-                  {{ form.last_name.errors }}
-              </div>
-              <div class="col-sm-6">
-                  {{ form.age.label_tag }}
-                  {{ form.age }}
-                  {{ form.age.errors }}
-              </div>
-              <div class="col-sm-6">
-                  {{ form.buying.label_tag }}
-                  {{ form.buying }}
-                  {{ form.buying.errors }}
-              </div>
-              {% if text %}
-              <hr>
-              {% else %}
-              <h4 class="mb-3">Kerakli malumotlar</h4>
-              {% endif %} 
-              <!-- Boshqa modullar uchun maydonlar -->
-              <div class="col-md-6">
-                  {{ form.systolic_blood_pressure.label_tag }}
-                  {{ form.systolic_blood_pressure }}
-                  {{ form.systolic_blood_pressure.errors }}
-              </div>
-              <div class="col-md-6">
-                  {{ form.total_cholesterol.label_tag }}
-                  {{ form.total_cholesterol }}
-                  {{ form.total_cholesterol.errors }}
-              </div>
-              <div class="col-md-6">
-                  {{ form.hdl_cholesterol.label_tag }}
-                  {{ form.hdl_cholesterol }}
-                  {{ form.hdl_cholesterol.errors }}
-              </div>
-              <div class="col-md-6">
-                  {{ form.on_blood_pressure_medication.label_tag }}
-                  {{ form.on_blood_pressure_medication }}
-                  {{ form.on_blood_pressure_medication.errors }}
-              </div>
-              <div class="col-md-6">
-                {{ form.cigarette_smoker.label_tag }}
-                {{ form.cigarette_smoker }}
-                {{ form.cigarette_smoker.errors }}
-            </div>
-              <div class="col-md-6">
-                {{ form.diabetes_present.label_tag }}
-                {{ form.diabetes_present }}
-                {{ form.diabetes_present.errors }}
-            </div>
+        <div class="container">
+          <div class="container">
+              <div class="row justify-content-start">
+                  <div class="col-lg-8 text-center text-lg-start">
+                      <form class="needs-validation" novalidate method="post" action="{% url 'form' %}" >
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                {{ form.first_name.label_tag }}
+                                {{ form.first_name }}
+                                <h5 style="color: red;">{{ form.first_name.errors }}</h5>
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form.last_name.label_tag }}
+                                {{ form.last_name }}
+                                <h5 style="color: red;">{{ form.last_name.errors }}</h5>
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form.age.label_tag }}
+                                {{ form.age }}
+                                <h5 style="color: red;">{{ form.age.errors }}</h5>
+                            </div>
+                            <div class="col-sm-6">
+                                {{ form.buying.label_tag }}
+                                {{ form.buying }}
+                                <h5 style="color: red;">{{ form.buying.errors }}</h5>
+                            </div>
+                            <!-- Boshqa modullar uchun maydonlar -->
+                            <div class="col-md-6">
+                                {{ form.systolic_blood_pressure.label_tag }}
+                                {{ form.systolic_blood_pressure }}
+                                <h5 style="color: red;">{{ form.systolic_blood_pressure.errors }}</h5>
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.total_cholesterol.label_tag }}
+                                {{ form.total_cholesterol }}
+                                <h5 style="color: red;">{{ form.total_cholesterol.errors }}</h5>
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.hdl_cholesterol.label_tag }}
+                                {{ form.hdl_cholesterol }}
+                                <h5 style="color: red;">{{ form.hdl_cholesterol.errors }}</h5>
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.on_blood_pressure_medication.label_tag }}
+                                {{ form.on_blood_pressure_medication }}
+                                <h5 style="color: red;">{{ form.on_blood_pressure_medication.errors }}</h5>
+                            </div>
+                            <div class="col-md-6">
+                              {{ form.cigarette_smoker.label_tag }}
+                              {{ form.cigarette_smoker }}
+                              <h5 style="color: red;">{{ form.cigarette_smoker.errors }}</h5>
+                          </div>
+                            <div class="col-md-6">
+                              {{ form.diabetes_present.label_tag }}
+                              {{ form.diabetes_present }}
+                              <h5 style="color: red;">{{ form.diabetes_present.errors }}</h5>
+                          </div>
+              
+                            <!-- Vaqtincha yo'qotish tugmasi -->
+                            {% if text %}
+                            <p class="float-end"><a href="{% url 'form' %}">Predict Return</a></p>
+                            {% else %}
+                            <div class="col-md-12">
+                              <button class="w-100 btn btn-primary btn-lg" type="submit">Pridect Natijasi</button>
+                          </div>
+                            {% endif %} 
+              
+                        </div>
+                    </form>
+                    <br><br>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="py-5 text-center">
+                      {% if text %}
+                      <h2>Natija </h2>
+                      <p class="lead">{{text}}</p>
+                      {% else %}
+                      <h2>Qiymatlarni kiriting ! </h2>
+                      {% endif %} 
 
-              <!-- Vaqtincha yo'qotish tugmasi -->
-              {% if text %}
-              <p class="float-end"><a href="{% url 'form' %}">Predict Return</a></p>
-              {% else %}
-              <div class="col-md-12">
-                <button class="w-100 btn btn-primary btn-lg" type="submit">Pridect Natijasi</button>
-            </div>
-              {% endif %} 
-
+                  </div>
+              </div>
           </div>
-      </form>
-      <br><br>
-      
       </div>
+
+      
     </div>
   </main>
 
