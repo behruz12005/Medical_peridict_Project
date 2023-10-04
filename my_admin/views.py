@@ -153,3 +153,7 @@ def LogoutPage(request):
     logout(request)
     return redirect('home')
 
+
+def error_page(request,exception):
+    return render(request, 'error.html')
+
